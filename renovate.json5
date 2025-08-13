@@ -3,4 +3,17 @@
   "extends": [
     "github>nadiamoe/renovate-config",
   ],
+  "customManagers": [
+    {
+      // Update npm packages
+      "customType": "regex",
+      "datasourceTemplate": "npm",
+      "managerFilePatterns": [
+        "Dockerfile",
+      ],
+      "matchStrings": [
+        "npm i.+ (?<depName>[\\w.-]+)@(?<currentValue>[\\w.-]+)",
+      ],
+    },
+  ]
 }
