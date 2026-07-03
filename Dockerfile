@@ -1,5 +1,5 @@
 FROM node:lts-alpine@sha256:e67514e5d0f6c46656005e1b693b2ec9d52e80b641307de684d4a015ba7a4eaf
 
-RUN npm install -g cronstrue@3.14.0
+RUN npm install -g cronstrue@3.24.0
 
 ENTRYPOINT [ "/usr/local/bin/cronstrue" ]
