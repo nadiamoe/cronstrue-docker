@@ -15,5 +15,18 @@
         "npm i.+ (?<depName>[\\w.-]+)@(?<currentValue>[\\w.-]+)",
       ],
     },
-  ]
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge cronstrue minors",
+      "matchPackageNames": [
+        "cronstrue",
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+      ],
+      "automerge": true,
+    },
+  ],
 }
